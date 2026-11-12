@@ -1,8 +1,8 @@
 flowchart TB
 
-    TITLE["LLD - T-Mobile SCM Integration Platform - Oracle SCM Integration Patterns"]
+    TITLE["LLD - enterprise SCM Integration Platform - Oracle SCM Integration Patterns"]
 
-    TMOBILE["T-Mobile Microservices<br/>Order | Inventory | Shipment | Procurement"]
+    enterprise["enterprise Microservices<br/>Order | Inventory | Shipment | Procurement"]
 
     GATEWAY["SCM Integration API Gateway<br/>Authentication | Validation | Routing"]
 
@@ -30,8 +30,8 @@ flowchart TB
 
     ERROR[("Error Store")]
 
-    TITLE --> TMOBILE
-    TMOBILE --> GATEWAY
+    TITLE --> enterprise
+    enterprise --> GATEWAY
     GATEWAY --> ORCHESTRATOR
 
     ORCHESTRATOR --> SYNC
@@ -63,7 +63,7 @@ flowchart TB
     DLQ --> ERROR
 
     classDef title fill:#263238,stroke:#263238,stroke-width:3px,color:#FFFFFF
-    classDef tmobile fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    classDef enterprise fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
     classDef integration fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
     classDef async fill:#FFF8E1,stroke:#F9A825,stroke-width:2px
     classDef security fill:#EDE7F6,stroke:#512DA8,stroke-width:2px
@@ -72,7 +72,7 @@ flowchart TB
     classDef error fill:#FFEBEE,stroke:#C62828,stroke-width:2px
 
     class TITLE title
-    class TMOBILE tmobile
+    class enterprise enterprise
     class GATEWAY,ORCHESTRATOR,SYNC,FILE integration
     class ASYNC,KAFKA async
     class SECURITY security

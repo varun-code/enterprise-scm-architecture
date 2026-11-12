@@ -8,10 +8,10 @@ flowchart TB
 
 
     %% =====================================================
-    %% T-MOBILE EDGE
+    %% enterprise EDGE
     %% =====================================================
 
-    subgraph EDGE["T-Mobile API / Edge Layer"]
+    subgraph EDGE["enterprise API / Edge Layer"]
 
         WAF["OCI WAF<br/>DDoS / OWASP / IP Protection"]
 
@@ -21,10 +21,10 @@ flowchart TB
 
 
     %% =====================================================
-    %% T-MOBILE BUSINESS SERVICES
+    %% enterprise BUSINESS SERVICES
     %% =====================================================
 
-    subgraph SERVICES["T-Mobile Business Services"]
+    subgraph SERVICES["enterprise Business Services"]
 
         ORDER["Order Service<br/>Java / Spring Boot"]
 
@@ -41,7 +41,7 @@ flowchart TB
     %% DATA
     %% =====================================================
 
-    DB[("T-Mobile Order Database")]
+    DB[("enterprise Order Database")]
 
 
     %% =====================================================
@@ -55,7 +55,7 @@ flowchart TB
     %% SCM INTEGRATION
     %% =====================================================
 
-    subgraph INTEGRATION["T-Mobile SCM Integration"]
+    subgraph INTEGRATION["enterprise SCM Integration"]
 
         SCM_INT["SCM Integration Service<br/>Kafka Consumers"]
 
@@ -63,7 +63,7 @@ flowchart TB
 
 
     %% =====================================================
-    %% T-MOBILE SECURITY
+    %% enterprise SECURITY
     %% =====================================================
 
     subgraph SECURITY["OCI Security & Secrets"]

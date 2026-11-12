@@ -45,7 +45,7 @@ spec:
       
       containers:
       - name: order-service
-        image: tmobile/order-service:1.0.0
+        image: enterprise/order-service:1.0.0
         imagePullPolicy: IfNotPresent
         
         ports:

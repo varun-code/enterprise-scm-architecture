@@ -1,1 +1,1 @@
-# tmobile-scm-architecture
+# enterprise-scm-architecture

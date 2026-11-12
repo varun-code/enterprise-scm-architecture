@@ -8,10 +8,10 @@ flowchart TB
 
 
     %% =====================================================
-    %% T-MOBILE SYSTEM
+    %% enterprise SYSTEM
     %% =====================================================
 
-    TMOBILE["T-Mobile<br/>Microservices"]
+    enterprise["enterprise<br/>Microservices"]
 
 
     %% =====================================================
@@ -32,9 +32,9 @@ flowchart TB
     %% MAIN BUSINESS FLOW
     %% =====================================================
 
-    USERS -->|"Business Requests"| TMOBILE
+    USERS -->|"Business Requests"| enterprise
 
-    TMOBILE -->|"Integration Events"| INTEGRATION
+    enterprise -->|"Integration Events"| INTEGRATION
 
     INTEGRATION -->|"Secure SCM Integration"| ORACLE
 
@@ -45,9 +45,9 @@ flowchart TB
 
     ORACLE -. "SCM Responses / Status" .-> INTEGRATION
 
-    INTEGRATION -. "Business Status" .-> TMOBILE
+    INTEGRATION -. "Business Status" .-> enterprise
 
-    TMOBILE -. "Business Response" .-> USERS
+    enterprise -. "Business Response" .-> USERS
 
 
     %% =====================================================
@@ -56,7 +56,7 @@ flowchart TB
 
     classDef external fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
 
-    classDef tmobile fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef enterprise fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
 
     classDef integration fill:#E0F7FA,stroke:#00838F,stroke-width:2px,color:#006064;
 
@@ -65,7 +65,7 @@ flowchart TB
 
     class USERS external;
 
-    class TMOBILE tmobile;
+    class enterprise enterprise;
 
     class INTEGRATION integration;
 
